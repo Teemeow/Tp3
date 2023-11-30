@@ -7,7 +7,6 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class ClientSend implements Runnable{
-    //not to do la partie exit car chiant compliqué et puis on t'a dis de pas faire donc tu le fais pas
     private ObjectOutputStream out;
     Socket socket;
 

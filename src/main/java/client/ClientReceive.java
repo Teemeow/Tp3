@@ -2,6 +2,7 @@ package client;
 
 import common.Message;
 
+import java.io.EOFException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
 
@@ -29,13 +30,10 @@ public class ClientReceive implements Runnable {
                 }
             }
             client.disconnectedServer();
-        }catch(Exception e){
-            try {
-                System.out.println(client.getPort());
-            }catch (Exception s){
-                System.out.println('o');
-            }
-
+        }catch(EOFException fe){
+                System.out.println(fe);
+        }catch (Exception e){
+            System.out.println(e);
         }
     }
 }

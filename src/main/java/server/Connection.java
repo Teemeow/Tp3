@@ -1,7 +1,6 @@
 package server;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.concurrent.ExecutionException;
 
 public class Connection implements Runnable{
     private Server server;
